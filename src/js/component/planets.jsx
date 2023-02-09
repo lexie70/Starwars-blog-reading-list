@@ -2,7 +2,7 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import { Link } from "react-router-dom";
 
-function Characters(){
+function Planets(){
     return <> 
  <div className="card me-3" style={{width: "18rem"}}>
   <img src={rigoImage} className="card-img-top" alt="..."/>
@@ -20,4 +20,4 @@ function Characters(){
 }
  
 
- export default Characters
+ export default Planets

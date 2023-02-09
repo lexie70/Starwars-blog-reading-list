@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/home.css";
 import Characters from "../component/characters.jsx";
+import Planets from "../component/planets.jsx";
 
 
 export const Home = () => (
@@ -12,6 +13,14 @@ export const Home = () => (
         <Characters/>
         <Characters/>
         <Characters/>
+    </div>
+    <h1>Planets</h1>
+    <div>
+        <Planets/>
+        <Planets/>
+        <Planets/>
+        <Planets/>
+        <Planets/>
     </div>
     
  </>   
