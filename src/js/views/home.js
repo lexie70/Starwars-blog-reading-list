@@ -12,7 +12,7 @@ export const Home = () => (
         <Characters/>
         <Characters/>
         <Characters/>
-        <Characters/>
+        
     </div>
     <h1>Planets</h1>
     <div>
@@ -20,7 +20,7 @@ export const Home = () => (
         <Planets/>
         <Planets/>
         <Planets/>
-        <Planets/>
+       
     </div>
     
  </>   
