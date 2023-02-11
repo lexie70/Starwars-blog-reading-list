@@ -7,7 +7,9 @@ import Planets from "../component/planets.jsx";
 export const Home = () => (
 <>
 <h1 className= "text-danger p-3">Characters</h1>
-    <div className ="d-flex flex-row mb-3">	
+    <div className ="d-flex overflow-auto">	
+        <Characters/>
+        <Characters/>
         <Characters/>
         <Characters/>
         <Characters/>
@@ -15,7 +17,9 @@ export const Home = () => (
         
     </div>
     <h1 className= "text-danger p-3">Planets</h1>
-    <div className ="d-flex flex-row mb-3">
+    <div className ="d-flex overflow-auto">
+        <Planets/>
+        <Planets/>
         <Planets/>
         <Planets/>
         <Planets/>
