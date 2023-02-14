@@ -28,6 +28,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
+				fetch('https://www.swapi.tech/api/people/')
+				.then((response)=> response.json())
+				.then(data => console.log(data))
+
+
+
 			},
 			changeColor: (index, color) => {
 				//get the store
