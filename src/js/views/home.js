@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import Characters from "../component/characters.jsx";
 import Planets from "../component/planets.jsx";
