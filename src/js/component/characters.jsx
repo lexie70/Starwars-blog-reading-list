@@ -5,13 +5,6 @@ import { Context } from "../store/appContext";
 
 
 function Characters(){
-  const {store,actions}=useContext(Context);
-  
-
-  useEffect(()=>{
-    actions.loadSomeData()
-  },[])
-
   
   return <> 
  <div className="card me-3 card-deck" style={{width: "18rem"}} >
