@@ -1,23 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "pink",
-					initial: "green"
-				},
-				{
-					title: "SECOND",
-					background: "grey",
-					initial: "white"
-				},
-				{ 
-					title: "tercero",
-					background: "lightblue",
-					initial: "white"
-				}
-			],
+			
 			characters:[],
 		},
 		actions: {
@@ -31,7 +15,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				*/
 				fetch('https://www.swapi.tech/api/people/')
 				.then((response)=> response.json())
-				.then(data => setStore({characters: data.results}))
+				.then(data => {setStore({characters: data.results}),console.log(getStore().characters);})
 				
 
 
