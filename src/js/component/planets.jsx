@@ -1,9 +1,17 @@
-import React from "react";
+import React,{useContext,useEffect}from "react";
+import { Context } from "../store/appContext";
 import rigoImage from "../../img/rigo-baby.jpg";
 import { Link } from "react-router-dom";
 
 function Planets(){
-    return <> 
+ const {store,actions}= useContext(Context)
+
+ useEffect(()=>{
+actions.loadSomePlanets()
+ },[])
+console.log(actions.loadSomePlanets());
+
+    return <>  
  <div className="card me-3 card-deck" style={{width: "18rem"}}>
   <img src={rigoImage} className="card-img-top" alt="..."/>
    <div className="card-body">

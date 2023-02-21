@@ -24,6 +24,7 @@ export const Home = () => {
            
            ))}   
         </div>
+        <button onClick={()=>console.log(store.planets)}>traer planets</button>
         <h1 className= "text-danger p-3">Planets</h1>
         <div className ="d-flex overflow-auto">
             <Planets/>
