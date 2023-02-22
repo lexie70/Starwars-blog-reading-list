@@ -7,27 +7,34 @@ function Planets(){
  const {store,actions}= useContext(Context)
 
  useEffect(()=>{
-actions.loadSomePlanets()
+actions.loadSomePlanets();
  },[])
-console.log(actions.loadSomePlanets());
 
-    return <>  
- <div className="card me-3 card-deck" style={{width: "18rem"}}>
-  <img src={rigoImage} className="card-img-top" alt="..."/>
-   <div className="card-body">
-     <h5 className="card-title">Card title</h5>
-     <p className="card-text"> quick example text to build on the card title and make up the bulk of the card's content.</p>
-     <Link to="/information">
-					<button className="btn btn-primary me-5 ">Learn more! </button>
-				</Link>
-        <Link to="/demo">
-					
-          <button type="button" className="btn btn-outline-warning float-end"><i className="fas fa-heart"></i></button>
-			</Link>
-  </div>
-</div>
 
-</>
+    return( 
+    <div className="d-flex overflow-auto">
+       {store.planets.map((item,index)=>{
+         return (
+        
+          <div key={index} className="card me-3 card-deck" style={{width: "18rem"}}>
+             <img src={rigoImage} className="card-img-top" alt="..."/>
+           <div className="card-body">
+            <h5 className="card-title">{item.name}</h5>
+             <Link to="/information">
+              <button className="btn btn-primary me-5 ">Learn more! </button>
+             </Link>
+             <Link to="/demo">
+              <button type="button" className="btn btn-outline-warning float-end"><i className="fas fa-heart"></i></button>
+             </Link>
+          </div>
+      </div>)
+            })} 
+              
+
+
+ 
+
+</div>)
 }
  
 
