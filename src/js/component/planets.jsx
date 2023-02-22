@@ -11,30 +11,32 @@ actions.loadSomePlanets();
  },[])
 
 
-    return( 
-    <div className="d-flex overflow-auto">
+    return(
+       <>
+   {/* //  <div className="d-flex overflow-auto"> */}
        {store.planets.map((item,index)=>{
          return (
         
-          <div key={index} className="card me-3 card-deck" style={{width: "18rem"}}>
-             <img src={rigoImage} className="card-img-top" alt="..."/>
-           <div className="card-body">
+      <div key={index} className="me-1 ms-1" style={{width: 18 + "rem"}}>
+         <img src={`https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg`} className="card-img-top" alt="..."/>
+         <div className="card-body">
             <h5 className="card-title">{item.name}</h5>
              <Link to="/information">
-              <button className="btn btn-primary me-5 ">Learn more! </button>
+              <button className="btn btn-primary float-start">Learn more! </button>
              </Link>
              <Link to="/demo">
               <button type="button" className="btn btn-outline-warning float-end"><i className="fas fa-heart"></i></button>
              </Link>
-          </div>
+         </div>
       </div>)
             })} 
               
 
 
  
-
-</div>)
+              </>
+// {/* </div> */}
+)
 }
  
 

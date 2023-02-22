@@ -14,7 +14,7 @@ function Characters(props){
 
   return <> 
  <div   className="card me-3 card-deck " style={{width: "18rem"}} >
-  <img src={"https://static.wikia.nocookie.net/starwars/images/9/90/LukeLEGENDS.jpg/revision/latest?cb=20160904145136&path-prefix=cs"} className="card-img-top" alt="..."/>
+  <img src={`https://starwars-visualguide.com/assets/img/characters/${props.id}.jpg`} className="card-img-top" alt="..."/>
    <div className="card-body">
      <h5 className="card-title">{props.hola}</h5>
      <p className="card-text"> Gender: {props.casita}<br></br> Hair Color: blond <br></br>Eye-Color: blue </p>

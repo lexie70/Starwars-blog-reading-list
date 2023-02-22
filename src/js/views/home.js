@@ -20,13 +20,13 @@ export const Home = () => {
         <h1 className= "text-danger p-3">Characters</h1>
         <div className ="d-flex overflow-auto">	
            {store.characters.map((item,index)=>(
-            <Characters hola={item.name} casita={'ventana'}  key={index} className="me-3 ms-3"/>
+            <Characters hola={item.name} id ={item.uid}  key={index} className="me-3 ms-3"/>
            
            ))}   
         </div>
         <button onClick={()=>console.log(store.planets)}>traer planets</button>
         <h1 className= "text-danger p-3">Planets</h1>
-        <div className ="d-flex overflow-auto">
+        <div className ="d-flex container-flex ">
             <Planets/>
              
         </div>  
