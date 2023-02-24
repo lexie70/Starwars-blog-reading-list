@@ -12,12 +12,12 @@ function Characters(props){
     actions.loadSomeData();
   }, []);
 
-  return <> 
- <div   className="card me-3 card-deck " style={{width: "18rem"}} >
+  return <div  style={{ display: 'flex', justifyContent: 'center' }}> 
+ <div   className="card me-2 card-deck "  style={{width: 15 + "rem",lengh: 15 + "rem"}} >
   <img src={`https://starwars-visualguide.com/assets/img/characters/${props.id}.jpg`} className="card-img-top" alt="..."/>
    <div className="card-body">
      <h5 className="card-title">{props.hola}</h5>
-     <p className="card-text"> Gender: {props.casita}<br></br> Hair Color: blond <br></br>Eye-Color: blue </p>
+     <p className="card-text"></p>
      <Link to="/Information">
 					<button className="btn btn-primary me-5">Learn more! </button>
 			</Link>
@@ -28,7 +28,7 @@ function Characters(props){
   </div>
 </div>
 
-</>
+</div>
 }
  
 

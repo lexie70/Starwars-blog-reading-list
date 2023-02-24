@@ -1,9 +1,21 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
+import { useParams } from "react-router";
 
 
 
 export const Information = () => {
+  const params = useParams()
+  console.log(params);
+  const [personaje,setPersonaje]= useState([])
+
+  useEffect(()=>{
+    fetch("https://www.swapi.tech/api/people/"+params.id)
+		.then((response) => response.json())
+		.then((data) =>console.log(data.result.properties))
+
+  },[])
+  console.log(personaje);
 
 return <>
  <div className="card mb-3" >

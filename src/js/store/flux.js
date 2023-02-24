@@ -4,6 +4,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			
 			characters:[],
 			planets:[],
+			loadingCharacter:true,
+			loadingPlanets:true,
+			charactersID:[],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -16,7 +19,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				*/
 				fetch('https://www.swapi.tech/api/people/')
 				.then((response)=> response.json())
-				.then(data => {setStore({characters: data.results}),console.log(getStore().characters);})
+				.then(data => setStore({characters: data.results, loadingCharacter:false}))
 			},
 
 			loadSomePlanets: () => {
@@ -25,9 +28,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 				*/
 				fetch('https://www.swapi.tech/api/planets/')
 				.then((response)=> response.json())
-				.then(data => {setStore({planets:data.results})})
+				.then(data => {setStore({planets:data.results, loadingPlanets: false}),console.log(store.loadingPlanets);})
 				},
-				
+
+				getIdCharacters: (id) => {
+					/**
+						fetch().then().then(data => setStore({ "foo": data.bar }))
+					*/
+					fetch(`https://www.swapi.tech/api/people/${id}`)
+					.then((response)=> response.json())
+					.then(data => console.log(data.results.properties))
+					},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

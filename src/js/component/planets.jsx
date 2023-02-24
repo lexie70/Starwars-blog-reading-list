@@ -12,12 +12,12 @@ actions.loadSomePlanets();
 
 
     return(
-       <>
-   {/* //  <div className="d-flex overflow-auto"> */}
+       
+   <div className="display-flex"  style={{ display: 'flex', justifyContent: 'center' }}> 
        {store.planets.map((item,index)=>{
          return (
         
-      <div key={index} className="me-1 ms-1" style={{width: 18 + "rem"}}>
+      <div key={index} className="me-1 ms-1" style={{width: 15 + "rem",lengh: 15 + "rem"}}>
          <img src={`https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg`} className="card-img-top" alt="..."/>
          <div className="card-body">
             <h5 className="card-title">{item.name}</h5>
@@ -34,8 +34,8 @@ actions.loadSomePlanets();
 
 
  
-              </>
-// {/* </div> */}
+              
+</div> 
 )
 }
  
