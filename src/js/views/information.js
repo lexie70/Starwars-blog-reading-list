@@ -1,6 +1,8 @@
-import React,{useEffect,useState} from "react";
+import React,{useEffect,useState,useContext} from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
-import { useParams } from "react-router";
+import { useParams, Link } from "react-router";
+import { Context } from "../store/appContext";
+import PropTypes from "prop-types";
 
 
 
@@ -8,14 +10,18 @@ export const Information = () => {
   const params = useParams()
   console.log(params);
   const [personaje,setPersonaje]= useState([])
-
-  useEffect(()=>{
-    fetch("https://www.swapi.tech/api/people/"+params.id)
-		.then((response) => response.json())
-		.then((data) =>console.log(data.result.properties))
-
+  const characterUrl = 'https://www.swapi.tech/api/people/'+params.theid;
+  const imgUrl = "https://starwars-visualguide.com/assets/img/characters";
+   const { store, actions } = useContext(Context);
+  
+   useEffect(() => {
+    fetch(characterUrl)
+    .then(res => res.json())
+    .then(data => setPersonaje(data.results))
+    .catch(err => err);
+    console.log(personaje)
   },[])
-  console.log(personaje);
+  
 
 return <>
  <div className="card mb-3" >

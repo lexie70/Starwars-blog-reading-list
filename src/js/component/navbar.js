@@ -1,7 +1,10 @@
-import React from "react";
+import React,{useContext} from "react";
+import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
+	const {store,actions}= useContext(Context)
+	
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			
@@ -10,10 +13,20 @@ export const Navbar = () => {
 				</Link>
 			
 			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">favorites </button>
-				</Link>
-			</div>
+				
+				<div className="dropdown">
+  <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Favorites
+  </button>
+  <ul className="dropdown-menu">
+
+    <li><button className="dropdown-item" type="button">Action</button></li>
+    
+  </ul>
+</div>
+</div>
+				
+		
 		</nav>
 	);
 };
