@@ -25,7 +25,7 @@ export const Home = () => {
         <h1 className= "text-danger p-3">Characters</h1>
         <div className ="d-flex overflow-auto">	
            {store.characters.map((item,index)=>(
-            <Characters prueba={item.mass} hola={item.name} id ={item.uid}  key={index} className="me-3 ms-3"/>
+            <Characters prueba={item.mass} nombre={item.name} id ={item.uid}  key={index} className="me-3 ms-3"/>
            
            ))}   
         </div>

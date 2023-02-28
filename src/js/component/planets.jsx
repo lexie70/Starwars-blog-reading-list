@@ -24,20 +24,20 @@ actions.loadSomePlanets();
              <Link to="/information">
               <button className="btn btn-primary float-start">Learn more! </button>
              </Link>
-             <Link to="/demo">
-              <button type="button" className="btn btn-outline-warning float-end"><i className="fas fa-heart"></i></button>
-             </Link>
+              <button type="button" className="btn btn-outline-warning float-end" onClick={()=>actions.addFavorite(item.name)}><i className="fas fa-heart"></i></button>
          </div>
       </div>)
-            })} 
-              
-
-
- 
-              
+         })} 
 </div> 
 )
 }
- 
+export default Planets
+           
 
- export default Planets
+
+
+           
+
+
+            
+             

@@ -41,9 +41,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(data => console.log(data.results))
 					.catch(error => console.log(error))
 					},
+				
+				delete: ()=>{
+                 
+				},
 
-				favoriteButton: ()=>{
-                 const store= getStore();
+				addFavorite: (item)=>{
+					const store = getStore();
+					const tempFavorite = store.favorites.push(item);
+					setStore({favorites: tempFavorite});
 				 
 
 				},
