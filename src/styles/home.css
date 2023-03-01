@@ -1,0 +1,29 @@
+#drop-menu {
+    padding: 0;
+}
+.drop-item {
+    font-size: 12px;
+    width: 100%;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.drop-item:hover {
+    background-color: rgb(228, 228, 228);
+    cursor: pointer;
+}
+.drop-item > span {
+    font-weight: 700;
+    display: block;
+    padding: 0 5px;
+}
+.drop-item > span:hover {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+body {
+background-color:grey;
+}

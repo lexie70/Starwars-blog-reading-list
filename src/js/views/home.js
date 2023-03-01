@@ -21,7 +21,7 @@ export const Home = () => {
       <h1>Loading...</h1>
     </div>) :(
       <>
-      <button onClick={()=>console.log(store.characters)}>traer characters</button>
+      {/* <button onClick={()=>console.log(store.characters)}>traer characters</button> */}
         <h1 className= "text-danger p-3">Characters</h1>
         <div className ="d-flex overflow-auto">	
            {store.characters.map((item,index)=>(
@@ -29,7 +29,7 @@ export const Home = () => {
            
            ))}   
         </div>
-        <button onClick={()=>console.log(store.planets)}>traer planets</button>
+        {/* <button onClick={()=>console.log(store.planets)}>traer planets</button> */}
         <h1 className= "text-danger p-3">Planets</h1>
         <div className =" flex-direction" style={{ display: 'flex', overflowX: 'scroll' }}>
             <div ><Planets/></div>

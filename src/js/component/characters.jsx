@@ -12,7 +12,8 @@ function Characters(props){
     actions.loadSomeData();
   }, []);
 
-  return <div  style={{ display: 'flex', justifyContent: 'center' }}> 
+  return (
+<div  style={{ display: 'flex', justifyContent: 'center' }}> 
  <div   className="card me-2 card-deck "  style={{width: 15 + "rem",lengh: 15 + "rem"}} >
   <img src={`https://starwars-visualguide.com/assets/img/characters/${props.id}.jpg`} className="card-img-top" alt="..."/>
    <div className="card-body">
@@ -28,7 +29,7 @@ function Characters(props){
   </div>
 </div>
 
-</div>
+</div>)
 }
  
 

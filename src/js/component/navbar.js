@@ -7,7 +7,7 @@ export const Navbar = () => {
 
 	
 	return (
-	 <nav className="navbar navbar-light bg-light mb-3">
+	 <nav className="navbar navbar-light bg-light mb-3" width= "30%">
 		
 		<Link to="/">
 		 <img src="https://www.freepnglogos.com/uploads/star-wars-logo-31.png" alt="star wars logo"  className="img-fluid" style={{width: "100px", height: "100px"}}/>
@@ -15,14 +15,14 @@ export const Navbar = () => {
 			
 		<div className="ml-auto">
 				
-		  <div className="dropdown">
-            <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+		  <div className="dropdown me-5">
+		  <button className="btn btn-secondary dropdown-toggle me-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Favorites
             </button>
 			<ul className="dropdown-menu">
               {store.favorites.map((item,index)=>{
                 return (
-					<li key={index}><button className="dropdown-item" type="button" >{item}{""}<span className="ms-5 bg-secondary p-1">X</span></button></li>
+					<li key={index}><button className="dropdown-item" type="button" >{item}<span className=" bg-secondary p-1 float-sm-end" onClick={()=>{actions.delete(item);}}>X</span></button></li>
 					)
 				}
 				)}

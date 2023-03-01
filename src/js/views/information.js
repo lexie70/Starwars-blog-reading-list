@@ -23,7 +23,7 @@ export const Information = () => {
   },[])
   
 
-return <>
+return (<>
  <div className="card mb-3" >
   <div className="row g-0">
     <div className="col-md-4">
@@ -38,5 +38,5 @@ return <>
     </div>
   </div>
 </div>
- </>
+ </>)
 }

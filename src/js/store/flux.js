@@ -42,8 +42,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log(error))
 					},
 				
-				delete: ()=>{
-                 
+				delete: (itemborrado)=>{
+                 const store = getStore();
+				 let nuevoFavorite = store.favorites.filter((item)=> itemborrado !== item)
+					setStore({favorites: nuevoFavorite});
 				},
 
 				addFavorite: (item)=>{
