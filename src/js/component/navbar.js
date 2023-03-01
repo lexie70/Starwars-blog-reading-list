@@ -22,7 +22,7 @@ export const Navbar = () => {
 			<ul className="dropdown-menu">
               {store.favorites.map((item,index)=>{
                 return (
-					<li key={index}><button className="dropdown-item" type="button" >{item}<span className="ms-5 bg-secondary p-1">X</span></button></li>
+					<li key={index}><button className="dropdown-item" type="button" >{item}{""}<span className="ms-5 bg-secondary p-1">X</span></button></li>
 					)
 				}
 				)}

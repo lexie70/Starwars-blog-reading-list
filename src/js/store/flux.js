@@ -48,10 +48,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				addFavorite: (item)=>{
 					const store = getStore();
-					const tempFavorite = store.favorites.push(item);
-					setStore({favorites: tempFavorite});
+					// const tempFavorite = store.favorites.concat(item);
+					// setStore({favorites: tempFavorite});
+					store.favorites.push(item);
+					setStore({favorites: store.favorites});
 				 
-
 				},
 
 			changeColor: (index, color) => {
