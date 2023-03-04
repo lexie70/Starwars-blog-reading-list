@@ -21,7 +21,7 @@ actions.loadSomePlanets();
          <img src={`https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg`} className="card-img-top" alt="..."/>
          <div className="card-body">
             <h5 className="card-title">{item.name}</h5>
-             <Link to="/InfoPlanets">
+             <Link to={`/InfoPlanets/${item.uid}`}>
               <button className="btn btn-primary float-start">Learn more! </button>
              </Link>
               <button type="button" className="btn btn-outline-warning float-end" onClick={()=>actions.addFavorite(item.name)}><i className="fas fa-heart"></i></button>

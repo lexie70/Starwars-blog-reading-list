@@ -32,11 +32,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then(data => {setStore({planets:data.results, loadingPlanets: false})})
 				},
 
-				getIdCharacters: (id) => {
+				getIdPlanets: (id) => {
 					/**
 						fetch().then().then(data => setStore({ "foo": data.bar }))
 					*/
-					fetch("https://www.swapi.tech/api/people/")
+					fetch("https://www.swapi.tech/api/planets/"+ id)
 					.then((response)=> response.json())
 					.then(data => console.log(data.results))
 					.catch(error => console.log(error))

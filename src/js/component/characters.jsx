@@ -19,7 +19,7 @@ function Characters(props){
    <div className="card-body">
      <h5 className="card-title">{props.nombre}</h5>
      <p className="card-text"></p>
-     <Link to="/Information">
+     <Link to={`/Information/${props.id}`}>
 					<button className="btn btn-primary me-5">Learn more! </button>
 			</Link>
       <button type="button" className="btn btn-outline-warning float-end" onClick={()=>actions.addFavorite(props.nombre)} ><i className="fas fa-heart"></i></button>
