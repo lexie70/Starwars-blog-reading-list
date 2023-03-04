@@ -6,7 +6,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planets:[],
 			loadingCharacter:true,
 			loadingPlanets:true,
-			charactersID:[],
+			planetsId:[],
 			favorites:[],
 		},
 		actions: {
@@ -36,10 +36,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					/**
 						fetch().then().then(data => setStore({ "foo": data.bar }))
 					*/
-					fetch("https://www.swapi.tech/api/planets/"+ id)
+					const store = getStore()
+					fetch(`https://www.swapi.tech/api/planets/${id}`)
 					.then((response)=> response.json())
-					.then(data => console.log(data.results))
-					.catch(error => console.log(error))
+					.then(data => setStore({planetsId: data.result.properties}))
 					},
 				
 				delete: (itemborrado)=>{

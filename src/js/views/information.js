@@ -1,5 +1,5 @@
 import React,{useEffect,useState,useContext} from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
+// import rigoImage from "../../img/rigo-baby.jpg";
 import { useParams, Link } from "react-router";
 import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
@@ -31,9 +31,9 @@ return (<>
         <h5 className="card-text">Gender: {personaje.gender}</h5>
         <h5 className="card-text">Height: {personaje.height}</h5>
         <h5 className="card-text">Mass: {personaje.mass} </h5>
-        <h5 className="card-text">Skin color: {personaje.skin_color}  </h5>
-        <h5 className="card-text">Eye color: {personaje.eye_color}  </h5>
-        <h5 className="card-text">Birth year: {personaje.birth_year}   </h5>
+        <h5 className="card-text">Skin color: {personaje.skin_color}</h5>
+        <h5 className="card-text">Eye color: {personaje.eye_color}</h5>
+        <h5 className="card-text">Birth year: {personaje.birth_year}</h5>
         
       </div>
     </div>
